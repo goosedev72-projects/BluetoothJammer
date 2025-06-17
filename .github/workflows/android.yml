@@ -18,7 +18,8 @@ jobs:
         distribution: 'temurin'
         java-version: '21'
     - name: Build with Gradle
-      run: ./gradlew assembleDebug lintVitalRelease
+      run: chmod 755 gradlew
+      run: ./gradlew assembleRelease lintVitalRelease
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
